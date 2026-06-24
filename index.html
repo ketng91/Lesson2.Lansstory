@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bài đọc song ngữ</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #ffd6ba;
+  padding: 15px;
+  color: #7a4e3e;
+}
+
+.header-left {
+  position: absolute;
+  left: 15px;
+}
+
+.header-left a {
+  text-decoration: none;
+  color: #7a4e3e;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-left a:hover {
+  color: #ff6b6b;
+}
+
+.header-center {
+  font-size: 26px;
+  text-align: center;
+}
+
+body {
+  font-family: Arial;
+  background-color: #fff8f0;
+  margin: 0;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  background-color: #ffd6ba;
+  padding: 15px;
+  color: #7a4e3e;
+}
+
+.header-center {
+  font-size: 28px;
+}
+
+/* BUTTON */
+.controls {
+  margin: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #a0e7e5;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffb3ba;
+}
+
+/* CONTENT */
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  font-size: 22px;
+}
+
+.pair {
+  margin-bottom: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pair.active {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: scale(1.02);
+}
+
+.speaker-icon{
+  float:right;
+  cursor:pointer;
+  color:#4a7c59;
+  margin-left:10px;
+}
+
+.speaker-icon:hover{
+  color:#ff6b6b;
+}
+
+/* EN */
+.en {
+  background: #d8f3dc;
+  padding: 12px;
+}
+
+/* VI */
+.vi {
+  background: #e3fdfd;
+  padding: 12px;
+  font-style: italic;
+  display: none;
+}
+
+/* footer */
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff0e1;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-left">
+    <a href="https://ketng91.github.io/khoathpt_Docsongngutubaihoc/">
+      <i class="fa-solid fa-house"></i> Home
+    </a>
+  </div>
+
+  <div class="header-center">
+    LUYỆN ĐỌC DỊCH - Lesson 2: Lan's story
+  </div>
+</header>
+
+<div class="controls">
+  <button onclick="autoPlay()">▶ Auto đọc</button>
+  <button onclick="stopAuto()">⏹ Dừng</button>
+
+<button onclick="toggleAllVI()" id="toggleBtn">Hiện bản dịch</button>
+</div>
+
+<div class="container">
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    I have always wanted to contribute to conserving nature, so I signed up for a tree-planting project in a rural area last month.
+  </div>
+  <div class="vi">
+    Tôi luôn muốn đóng góp vào việc bảo tồn thiên nhiên, vì vậy tôi đã đăng ký một dự án trồng cây ở khu vực nông thôn vào tháng trước.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    Deforestation has become a critical issue there, leading to severe soil erosion.
+  </div>
+  <div class="vi">
+    Nạn phá rừng đã trở thành một vấn đề nghiêm trọng ở đó, dẫn đến xói mòn đất nghiêm trọng.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    During the campaign, our team managed to plant over 500 saplings in the local forest.
+  </div>
+  <div class="vi">
+    Trong chiến dịch, nhóm của chúng tôi đã trồng hơn 500 cây non trong khu rừng địa phương.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    Besides planting trees, we also distributed leaflets to households, encouraging them to adopt a greener lifestyle by reducing single-use plastics and conserving energy.
+  </div>
+  <div class="vi">
+    Ngoài việc trồng cây, chúng tôi còn phát tờ rơi cho các hộ gia đình, khuyến khích họ áp dụng lối sống xanh hơn bằng cách giảm đồ nhựa dùng một lần và tiết kiệm năng lượng.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    Although the weather was scorching hot and we had to walk long distances, seeing the green hills filled me with pride.
+  </div>
+  <div class="vi">
+    Mặc dù thời tiết rất nắng nóng và chúng tôi phải đi bộ quãng đường dài, nhưng nhìn những ngọn đồi xanh khiến tôi cảm thấy tự hào.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    It was a meaningful journey that completely changed my perspective on environmental responsibility.
+  </div>
+  <div class="vi">
+    Đó là một hành trình ý nghĩa đã hoàn toàn thay đổi quan điểm của tôi về trách nhiệm đối với môi trường.
+  </div>
+</div>
+
+
+</div>
+<footer>© Lớp Anh thầy Kết</footer>
+
+<script>
+let showAll = false;
+
+function toggleAllVI() {
+  const viList = document.querySelectorAll('.vi');
+  const btn = document.getElementById('toggleBtn');
+
+  showAll = !showAll;
+
+  viList.forEach(v => {
+    v.style.display = showAll ? 'block' : 'none';
+  });
+
+  btn.innerText = showAll ? 'Ẩn bản dịch' : 'Hiện bản dịch';
+}
+
+/* ===== TOGGLE DỊCH TỪNG CÂU ===== */
+function toggleVI(el) {
+  const vi = el.querySelector('.vi');
+  vi.style.display = (vi.style.display === 'block') ? 'none' : 'block';
+}
+
+/* ===== SPEECH ===== */
+function speak(text){
+
+  speechSynthesis.cancel();
+
+  const utter = new SpeechSynthesisUtterance(text);
+
+  utter.lang = "en-US";
+
+  // đọc tự nhiên hơn
+  utter.rate = 0.9;
+  utter.pitch = 1.1;
+  utter.volume = 1;
+
+  const voices = speechSynthesis.getVoices();
+
+  // ưu tiên các giọng nữ
+  const femaleVoice =
+      voices.find(v => v.name.includes("Jenny")) ||
+      voices.find(v => v.name.includes("Aria")) ||
+      voices.find(v => v.name.includes("Female")) ||
+      voices.find(v => v.name.includes("Zira")) ||
+      voices.find(v => v.name.includes("Samantha")) ||
+      voices.find(v => v.name.includes("Google UK English Female")) ||
+      voices.find(v => v.name.includes("Google US English")) ||
+      voices.find(v => v.lang === "en-US");
+
+  if(femaleVoice){
+      utter.voice = femaleVoice;
+      console.log("Using voice:", femaleVoice.name);
+  }
+
+  speechSynthesis.speak(utter);
+}
+/* DOUBLE CLICK ĐỂ NGHE */
+document.querySelectorAll('.pair').forEach(pair => {
+  pair.addEventListener('dblclick', () => {
+    const text = pair.querySelector('.en').innerText;
+    speechSynthesis.cancel();
+    speak(text);
+  });
+});
+
+/* ===== AUTO ĐỌC ===== */
+let index = 0;
+let interval;
+
+function autoPlay() {
+  const pairs = document.querySelectorAll('.pair');
+  index = 0;
+
+  speechSynthesis.cancel();
+
+  interval = setInterval(() => {
+    if (index >= pairs.length) {
+      clearInterval(interval);
+      return;
+    }
+
+    const text = pairs[index].querySelector('.en').innerText;
+    speak(text);
+
+    index++;
+  }, 3500);
+}
+
+function stopAuto() {
+  clearInterval(interval);
+  speechSynthesis.cancel();
+}
+
+document.querySelectorAll('.en').forEach(en => {
+
+  const text = en.innerText.trim();
+
+  const icon = document.createElement('i');
+
+  icon.className =
+    'fa-solid fa-volume-high speaker-icon';
+
+  icon.onclick = function(e){
+    e.stopPropagation();
+    speak(text);
+  };
+
+  en.appendChild(icon);
+
+});
+
+speechSynthesis.onvoiceschanged = () => {
+  speechSynthesis.getVoices();
+};
+
+</script>
+
+</body>
+</html>
